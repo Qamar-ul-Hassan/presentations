@@ -1,0 +1,1220 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+%\documentclass[parskip]{scrartcl}
+%\documentclass{article}
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+\usefonttheme{professionalfonts} 
+%\usecolortheme{albatross}
+\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{adjustbox}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{lipsum}
+%\usepackage[T1]{fontenc}
+\usepackage{eso-pic}
+\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{fancybox}
+\usepackage{tikz}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{etoolbox}
+\usepackage{changepage}
+\usepackage{array,colortbl,xcolor}
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage{verbatim} 
+\usepackage{longtable}
+\usepackage[english]{babel}
+\usepackage{subfig}
+\usepackage{cancel}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{draftwatermark}
+\usepackage{pst-abspos,pst-text}
+\usepackage{transparent}
+\usepackage{rotating}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{draftwatermark}
+\usepackage{tcolorbox}
+\usepackage[customcolors]{hf-tikz}
+\usetikzlibrary{arrows,shapes}
+\SpecialCoor
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[PhD Defence]{Measurement of Top Quark Mass and Production Cross-Section using tt-bar pairs with Semi-Leptonic Decay Channel} % The short title appears at the bottom of every slide, the full title is only on the title page
+%\begin{center}
+%TOP-16-006
+%\end{center}
+\author[Qamar-ul-Hassan]{\\
+\vspace{5 mm}
+Qamar-ul-Hassan\\11-FBAS/PHDPHY/S11} % Your name
+\institute[IIU-Islamabad] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+International Islamic University, Islamabad% \\ % Your institution for the title page
+\medskip
+%\textit{qamar@cern.ch} % Your email address
+}
+%\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+%\put(\LenToUnit{0.01\paperwidth},\LenToUnit{0.9\paperheight}){#1}}}
+%\AddToShipoutPictureFG{
+%  \AtPagemyUpperLeft{{\includegraphics[width=.9cm,keepaspectratio]{paper_fig/CMScol}}}
+%}%
+%\titlegraphic{\includegraphics[width=2cm]{paper_fig/CMScol}%\hspace*{4.75cm}~%
+%   \includegraphics[width=2cm]{paper_fig/CMScol}
+%}
+\institute [IIU-Islamabad]{Supervisor:{\bf{ Prof. Dr. Hafeez R. Hoorani}} (NCP, Islamabad)
+\\Co-Supervisor:{\bf{ Dr. Waqar Adil Syed}} (IIU, Islamabad)}
+
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+\setbeamertemplate{itemize items}[triangle]
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+\definecolor{mycolor}{RGB}{255,255,255}
+\tcbset{colframe=white,colback=white,nobeforeafter}
+
+\newcommand<>{\fullsizegraphic}[1]{
+  \begin{textblock*}{0cm}(-1cm,-3.78cm)
+  \includegraphics[width=\paperwidth]{#1}
+  \end{textblock*}
+}
+%------------------------------------------------
+%--------------SLIDE 2---------------------------
+%------------------------------------------------
+%-----------------------------------------------------------------------
+\begin{frame}
+\frametitle{Large Hadron Collider (LHC)}
+\begin{itemize}
+\item the LHC is a discovery machine
+\item the LHC will determine the future course 
+of high energy physics
+\item to smash protons moving at 99.999999\% 
+to the speed of light
+\item to create conditions a fraction of a second 
+after the big bang
+\item High energies allows us:
+\begin{itemize}
+\item to look deeper into nature (E $\alpha$ 1/size),
+("powerful microscopes")
+\item to discover new particles with
+high(er) mass (E=m$c^2$) 
+\item to study the early universe (E=kT)
+\item revisit the earlier, hotter, history of our 
+universe, searching for a new simplicity ("powerful telescopes")
+by observing phenomena and particles no longer observable in 
+our everyday experience
+\end{itemize}
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%--------------SLIDE 3---------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Compact Muon Solenoid (CMS)}
+\begin{columns}
+\column{0.6\linewidth}
+\includegraphics[width=0.99\linewidth,height=0.99\linewidth]{img/cms_3d_jul10}
+\begin{itemize}
+\item Multi-purpose detector
+\end{itemize}
+\column{0.48\linewidth}
+\begin{itemize}
+\item Distinct features are compact size and superconducting solenoid (3.8 T)
+\item Tracker and calorimeters are located inside the solenoid
+\item Muon detectors are out side the solenoid
+\item All these sub-detectors are arranged in layers around the interaction point
+\end{itemize}
+\end{columns}
+\end{frame}
+%----------------------------------------------------
+%----------------------------------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{Compact Muon Solenoid (CMS)}
+\includegraphics[width=0.99\linewidth]{img/CMS_slice}
+%\includegraphics[width=0.45\linewidth,height=0.45\linewidth]{img/CMS_slice}
+\begin{itemize}
+\item Particle identification: Various types of particles interact with matter differently,
+leaving a typical or no signal in specific subdetectors.
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{TOP quark physics}
+\begin{itemize}
+\item The heaviest quark in the SM, discovered in 1995 at Tevatron.
+\item Charge of +2/3, weak isospin of +1/2 and life-time is 5$\times10^{-25}$ sec, so decays before hadronization.
+\item The spin information is kept by its decay products and its only quark which provides opportunity to study the properties of a bare quark.
+\item Major backgrounds to many important searches beyond the Standard Model (BSM) processes.
+\end{itemize}
+\includegraphics[width=0.5\linewidth]{img/TopPDF}
+\includegraphics[width=0.6\linewidth, height=0.35\linewidth]{img/coffee}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Scope}
+\begin{itemize}
+\item We aim to measure the cross section at 13 TeV
+\begin{itemize}
+\item how precise can we measure it in the l+jets final state
+\item precise measurement of the cross section opens the possibility to perform
+\begin{itemize}
+\item precision measurements (PDFs, $\alpha_S$)
+\item extrapolating the pole mass \href {http://arxiv.org/abs/1511.00841}{\beamergotobutton{http://arxiv.org/abs/1511.00841}}
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item search for physics beyond the standard model is particularly relevant at Run 2
+\begin{itemize}
+\item A deviation in the ratio of cross section at 13 TeV/ 8TeV \href {http://arxiv.org/abs/1206.3557}{\beamergotobutton{http://arxiv.org/abs/1206.3557}}
+\item by setting limit on stop production \href {http://arxiv.org/abs/1407.1043}{\beamergotobutton{http://arxiv.org/abs/1407.1043}}
+\item A deviation in the branching ratios of different final states (test lepton universality in ttbar decays) 
+\item For this preliminary result, we shall measure $\sigma$ only
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 4-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{L+Jets Final State}
+\begin{itemize}
+\item The l+jets final state is chosen
+\item High statistics, moderate background
+\item Branching ratio ($t\bar{t} \rightarrow l\nu q\bar{q} b\bar{b}$) = 30\% + 5.3\% from $tau \rightarrow l\nu\nu$ decays
+\item Expect 1 lepton, $\cancel{\it{E}}_{T}$ and 4 jets including at least 2 b-tags
+\item We start the analysis with 1 jet (next slide)
+\end{itemize}
+\begin{center}
+ \includegraphics[width=0.4\linewidth]{img/decay}
+\end{center}
+\end{frame}
+%----------------------------------------------------
+%------------------------------------------------
+%------------SLIDE 5-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Analysis Strategy}
+\scriptsize
+\begin{itemize}
+\item We divide the analysis in different categories by counting the jets and b-tags
+\item Low jet/btag categories to constrain backgrounds while high jet/btag to fit the signal
+\item Analysis is also divided according to lepton charge
+\begin{itemize}
+\item charge asymmetry is expected for W+Jets
+\end{itemize}
+\item We don't subdivide the simulation per heavy flavor
+\begin{itemize}
+\item As we are not having the enough statistics
+\end{itemize}
+\item similar approach of TOP-11-004/TOP-13-004 ($SH_YFT$, legacy Run-I)
+\end{itemize}
+\begin{center}
+ \includegraphics[width=0.4\linewidth]{img/strategy}
+\end{center}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 6-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Physics object selection}
+\begin{columns}
+\column{0.48\linewidth}
+\setbeamercolor{block title}{use=structure,fg=white,bg=purple!75!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+\begin{block}{Muon Selection}
+\begin{adjustwidth}{-0.5em}{-0.5em}
+\tiny
+\begin{itemize}
+\vspace{.1cm}
+\item IsoMu20$||$IsoTkMu20 %(data)\\ IsoMu20\_eta2p1$||$IsoTkMu20\_eta2p1 (MC)
+\item Exactly one muon
+\begin{itemize}
+\tiny
+\item $ p_{T}$ \textgreater 30 GeV, $|\eta|$ \textless 2.1, tight ID
+\item dB \textless 0.2, dZ \textless 0.5, relIso \textless 0.15
+\item SIP3D \textless 4
+\end{itemize}
+\item Loose Muon Veto
+\begin{itemize}
+\tiny
+\item $ p_{T}$ \textgreater 15 GeV, $|\eta|$ \textless 2.4, relIso \textless 0.25
+\end{itemize}
+\end{itemize}
+\vspace{.2cm}
+\end{adjustwidth}
+\end{block}
+\column{0.48\linewidth}
+\setbeamercolor{block title}{use=structure,fg=white,bg=purple!75!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+\begin{block}{Electron Selection}
+\begin{adjustwidth}{-0.5em}{-0.5em}
+  \tiny
+  \begin{itemize}
+  \vspace{.1cm}
+\item Ele22\_eta2p1\_WPLoose\_Gsf %(for data)
+%\item Ele27\_eta2p1\_WPLoose\_Gsf (for MC)
+\item Exactly one electron
+\begin{itemize}
+\tiny
+\item Using official electron tight ID
+\item $ p_{T}$ \textgreater 30 GeV, $|\eta|$ \textless 2.1
+\item SIP3D \textless 4
+\end{itemize}
+\item Using recommended electron veto ID
+\end{itemize}
+\vspace{.1cm}
+\end{adjustwidth}
+\end{block}
+\end{columns}
+\setbeamercolor{block title}{use=structure,fg=white,bg=purple!75!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+\begin{block}{Jet Selection}
+\vspace{0.2cm}
+ \tiny
+  \begin{itemize}
+\item We require at least one jet
+\begin{itemize}
+\tiny
+\item LOOSE jet ID is applied
+\item $ p_{T}$ \textgreater 30 GeV, $|\eta|$ \textless 2.4, Fall15\_25nsV2
+\end{itemize}
+\item Count number of jets identified as b's
+\begin{itemize}
+\tiny
+\item CSV Discriminator value \textgreater 0.800 (medium working point)
+\end{itemize}
+\end{itemize}
+\vspace{.1cm}
+\end{block}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 7-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data and MC samples}
+    \begin{table}[t]
+ \vspace{-2.5pt}
+      \setlength{\tabcolsep}{1.0pt}
+      \tiny
+          \begin{tabular}{!{\color{purple}\vrule}l!{\color{purple}\vrule}c!{\color{purple}\vrule}c!{\color{purple}\vrule}}
+\arrayrulecolor{purple}\hline
+\toprule
+Data samples &  Integrated Luminosity\\
+\arrayrulecolor{purple}\hline %\midrule
+\toprule
+/SingleMuon/Run2015C\_25ns-16Dec2015-v1/MINIAOD & {}\\
+/SingleElectron/Run2015C\_25ns-16Dec2015-v1/MINIAOD & 2.2 fb\textsuperscript{-1}\\
+/SingleMuon/Run2015D-16Dec2015-v1/MINIAOD & {}\\
+/SingleElectron/Run2015D-16Dec2015-v1/MINIAOD & {}\\
+\toprule
+\end{tabular}
+\end{table}
+    \begin{table}[t]
+ \vspace{-8.5pt}
+      \setlength{\tabcolsep}{1.0pt}
+       \tiny
+          \begin{tabular}{!{\color{purple}\vrule}l!{\color{purple}\vrule}c!{\color{purple}\vrule}c!{\color{purple}\vrule}c!{\color{purple}\vrule}}%c!{\color{purple}\vrule}}
+          \arrayrulecolor{purple}\hline
+           \toprule
+MC samples &  Process & Cross section[pb] & Events\\
+\toprule
+\tiny
+/TT\_TuneCUETP8M1\_13TeV-powheg-pythia8 & $t\bar{t}$ & 831.76 & 97994442\\
+/TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & $t\bar{t}$+V & 0.2043 & 250307\\
+/TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & $t\bar{t}$+V & 0.4062 & 831847\\
+/TTZToQQ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & $t\bar{t}$+V & 0.5297 & 747000\\
+/TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & $t\bar{t}$+V & 0.2529 & 394200\\
+/ZZ\_TuneCUETP8M1\_13TeV-pythia8 & Multiboson & 16.523 & 985600\\
+/WWToLNuQQ\_13TeV-powheg & Multiboson & 49.497 & 6996000\\
+/WWTo2L2Nu\_13TeV-powheg & Multiboson & 12.178 & 1979988\\
+/WZ\_TuneCUETP8M1\_13TeV-pythia8 & Multiboson & 47.13 & 100000\\
+/WJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 & W & 61526.7 & 199037280\\
+/ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & tW & 35.6 & 1000000\\
+/ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & tW & 35.6 & 999400\\
+/ST\_t-channel\_4f\_leptonDecays\_13TeV-amcatnlo-pythia8\_TuneCUETP8M1 & t-ch & 44.33 & 3299200\\
+/ST\_t-channel\_antitop\_4f\_leptonDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1 & t-ch & 26.38 & 1630900\\
+/DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & DY & 6025.0 & 247512446\\
+/DYJetsToLL\_M-10to50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 & DY & 18610 & 76558711\\
+/Multijets (data) & & &\\
+\toprule
+\end{tabular}
+\end{table}
+\begin{itemize}
+\tiny
+\item MC samples are normalized by:
+$\hat{N}=\mathcal{L}\cdot\sigma\cdot\frac{\sum_{i=1}^{\rm N_{sel}} w_i}{\sum_{i=1}^{\rm N_{gen}} w_i}$
+%$\frac{ \sum_{i=1}^{selected} w_i \cdot \sigma \mathcal{L} }{ \sum_{i=1}^{generated} w_i}$
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%--------------SLIDE 8---------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Correction Factors applied to Simulation}
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\scriptsize
+\item PU reweighting based on 69 minimum bias cross section
+\item b-Tag scale factors (76X)
+\begin{itemize}
+\scriptsize
+\item we scale Herwig++ efficiency to match pythia8 and apply the BTV scale factors to that
+\end{itemize}
+\scriptsize
+\item Lepton SF (Official POG), cross checked in this analysis
+\item JEC (Fall15\_25nsV2)
+\item JES sources \href {https://twiki.cern.ch/twiki/bin/view/CMS/JECUncertaintySources}{\beamergotobutton{uncertainties broken in 29 sources}}
+\item JER \href {https://twiki.cern.ch/twiki/bin/view/CMS/JetResolution}{\beamergotobutton{JER twiki}}
+%\item JER \href {https://twiki.cern.ch/twiki/bin/view/CMS/JetResolution}{\beamergotobutton{https://twiki.cern.ch/twiki/bin/view/CMS/JetResolution}}
+\end{itemize}
+\column{0.5\textwidth}
+\includegraphics[height=0.67\linewidth]{img/btageff}
+%\end{center}
+\end{columns}
+\end{frame}
+%---------------------------------------------------------------
+%-----------SLIDE 9------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Stability of the Selection}
+\begin{itemize}
+\item The rate of events is very stable as function of run number
+\item A couple of runs identified with anomalous rates have very low luminosity ($\sim 1pb^{-1}$)
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.5\linewidth,height=0.3\linewidth]{img/muplus/ratevsrun_4j}
+\put(-85,-15){\bf{\small\textcolor{blue}{4J,\bf$\mu^{+}$}}}
+%\vspace*{-3cm}
+%\hspace*{5.9cm} 
+\includegraphics[width=0.5\linewidth,height=0.3\linewidth]{img/eplus/ratevsrun_4j}
+\put(-85,-15){\bf{\small\textcolor{blue}{4J, $el^{+}$}}}
+\end{center}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 10----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Trigger Efficiency Measurements}
+\begin{center}
+ \includegraphics[width=0.27\linewidth]{img/TnP/mu/SIP_eta}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{$\mu$,trigger}}}
+ \includegraphics[width=0.27\linewidth]{img/TnP/mu/ISO_SIP_eta}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{$\mu$,isolation}}}\\
+ \includegraphics[width=0.27\linewidth]{img/TnP/e/Tri_et}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{el,trigger}}}
+ \includegraphics[width=0.27\linewidth]{img/TnP/e/ISO_et}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{el,isolation}}}
+\end{center}
+%\tiny
+\begin{itemize}
+%\item SIP3D
+\small
+\item Using official TnP trees adopted for our selection (Different fitting models tried)
+\item Results are used as a cross check of the official SFs
+%\item Difference $\approx$ 1\%
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%-----------SLIDE 11------------------------------
+%------------------------------------------------
+\begin{frame}
+\Huge{\textbf {\textcolor {blue}{Background estimation}}}\\
+%\Large {\textcolor{blue}{(pre-fit, stats only uncertainty)}}
+\end{frame}
+%------------------------------------------------
+%-----------SLIDE 12------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Background Estimation: W+Jets}
+\begin{itemize}
+\item Modelled from simulation
+\item Analysis in each lepton channel is sub-divided according to lepton charge
+\item $t\bar{t}$ production is expected to be symmetric
+\item W production is expected to asymmetric due to PDF composition of protons
+\item Assign the corresponding uncertainties from the choice of the QCD scales and PDFs.
+\begin{itemize}
+\item The templates are currently derived from the MG5\_aMC@NLO
+\item Large fraction of negative weights, sufficient statistics to provide positive defined and fairly smooth templates
+%\item Try to use shapes from Madgraph instead
+\end{itemize}
+\item Compared MG5\_aMC@NLO with MADGRAPH in different categories
+\item Difference in normalization is observed but the shape of the distributions is fairly similar
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%----------------SLIDE 13------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{MET Distributions}
+\begin{center}
+ \includegraphics[width=0.27\linewidth]{img/wjets/wjets_metpt_1j0t}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{1j0t}}}
+ \includegraphics[width=0.27\linewidth]{img/wjets/wjets_metpt_2j0t}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{2j0t}}}\\
+ \includegraphics[width=0.27\linewidth]{img/wjets/wjets_metpt_3j0t}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{3j0t}}}
+ \includegraphics[width=0.27\linewidth]{img/wjets/wjets_metpt_4j0t}
+ \put(-35,35){\bf{\tiny\textcolor{blue}{4j0t}}}
+\end{center}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{W+Jets Normalization and Charge Asymmetry}
+\begin{table}[htb]
+\begin{center}
+%\label{tab:wjetsnorm}
+\begin{tabular}{ lcccc }
+\hline
+Category & =1 jet & =2 jets & =3 jets & $\geq$4 jets\\
+\hline
+$\mu^+$ & 1.112$\pm$0.002 & 1.184$\pm$0.006 & 1.20$\pm$0.01 & 0.96$\pm$0.02 \\
+$\mu^-$ & 1.095$\pm$0.003 & 1.170$\pm$0.006 & 1.19$\pm$0.01 & 0.97$\pm$0.02 \\
+$e^+$ & 1.102$\pm$0.003 & 1.196$\pm$0.007 & 1.21$\pm$0.02 & 0.96$\pm$0.02 \\
+$e^-$ & 1.288$\pm$0.004 & 1.38$\pm$0.008 & 1.40$\pm$0.02 & 1.09$\pm$0.03 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{itemize}
+\item Ratio of the events predicted by MG5\_aMC@NLO wrt MADGRAPH
+\item Predicts $\sim$ 20\% more events wrt to madgraph for Njets \textless 4
+\item Predicts $\sim$ 5\% less events for Njets \textgreater 4
+\item As a consequence of this observation, different charge asymmetry is predicted
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%------------------SLIDE 14----------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Background Estimation: QCD Multijets}
+\begin{itemize}
+\item Normalization is determined from events with low $\cancel{\it{E}}_{T}$ (\textless 20 GeV)
+\begin{itemize}
+\item Expect to be dominated by QCD
+\item Extract QCD shape from events with relIso \textgreater 0.4
+\item Normalized from:
+\tiny
+\begin{equation}
+N_{\rm SR}(QCD) = [N_{\rm CR}(obs)-N_{\rm CR}(non-QCD)] \cdot \frac{N_{\rm SR}^{E_T^{miss}<20}(obs)-N_{\rm SR}^{E_T^{miss}<20}(non-QCD)}{N_{\rm CR}^{E_T^{miss}<20}(obs)-N_{\rm CR}^{E_T^{miss}<20}(non-QCD)}\nonumber
+%\label{eq:qcdest}
+\end{equation}
+\end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.4\linewidth]{img/munoniso/metpt_1j}
+\put(-55,55){\bf{\tiny\textcolor{blue}{1J, non iso}}}
+\includegraphics[width=0.4\linewidth]{img/muplus/metpt_1j}
+\put(-55,55){\bf{\tiny\textcolor{blue}{1J, isolated}}}
+\end{center}
+\end{frame}
+%------------------------------------------------
+%-----------------SLIDE 15-----------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Background Estimation: QCD Multijets}
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{ lcccc }
+\hline
+Category &  =1 jet & =2 jets & =3 jets & $\geq$4 jets\\
+\hline
+$\mu^+$ & $1.89\pm0.09$ & $1.63\pm0.14$ & $2.77\pm0.24$ & $2.17\pm0.23$ \\
+$\mu^-$ & $1.59\pm0.05$ & $1.19\pm0.05$ & $2.64\pm0.22$ & $2.01\pm0.15$ \\
+$e^+$ & $2.71\pm0.09$ & $2.29\pm0.10$ & $2.60\pm0.13$ & $2.14\pm0.30$ \\
+$e^-$ & $2.50\pm0.12$ & $2.06\pm0.05$ & $2.56\pm0.13$ & $2.03\pm0.10$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{itemize}
+\item Scale factors to be applied to the control region distributions for QCD to normalize them in the signal region
+\item Overall the scale factors are approximately constant across the different jet multiplicity categories
+\item tend to increase for higher jet multiplicities
+\begin{itemize}
+\item Due to NON QCD contamination in control region
+%\item Final fit will determine the best normalization for QCD
+\end{itemize}
+\item Uncertainty is higher in the positively charged lepton sample (as a consequence of charge asymmetry)
+\item All scale factors are close to two, data is triggered by isolated lepton triggers
+\item We capture only a portion of non-isolated leptons
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%-------------SLIDE 16----------------------------
+%------------------------------------------------
+\begin{frame}
+\Huge{\textbf {\textcolor {blue}{Control distributions}}}\\
+\Large {\textcolor{blue}{(pre-fit, stats only uncertainty)}}
+\end{frame}
+%------------------------------------------------
+%-----------SLIDE 17-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Events count}
+\begin{center}
+\begin{tikzpicture}
+\node (0,0){\includegraphics[width=1.0\linewidth]{paper_fig/Figure_001}};
+\begin{turn}{45}
+%\node [opacity=1.9] (0,0) {\scalebox{3.0}{\textcolor{red}{$\displaystyle PAS$}}};
+\end{turn}
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item e/mu+jets combined for positive/negative charged leptons
+\item Statistical uncertainty only
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%-----------SLIDE 18-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{MET distributions}
+\begin{columns}
+\column{0.3\textwidth}
+\begin{itemize}
+\scriptsize
+\item At pre-approval (74X), we were using these distributions to constrain backgrounds
+\item Not so well modelled in 76X (electron channel)
+\begin{itemize}
+\scriptsize
+\item we count simply the number of events with 0-btags
+\end{itemize}
+\end{itemize}
+\column{0.7\textwidth}
+\begin{center}
+    \includegraphics[width=0.45\linewidth]{plots/allmetpt_1j0t}
+    \put(-65,55){\bf{\tiny\textcolor{blue}{1j0t}}}
+    \includegraphics[width=0.45\linewidth]{plots/allmetpt_2j0t}
+    \put(-65,55){\bf{\tiny\textcolor{blue}{2j0t}}}\\
+    \includegraphics[width=0.45\linewidth]{plots/allmetpt_3j0t}
+    \put(-65,55){\bf{\tiny\textcolor{blue}{3j0t}}}
+    \includegraphics[width=0.45\linewidth]{plots/allmetpt_4j0t}
+    \put(-65,55){\bf{\tiny\textcolor{blue}{4j0t}}}
+        \end{center}
+\end{columns}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+%-----------SLIDE 19-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{M(l,b)}
+\begin{center}
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_1j1t}
+    \put(-35,55){\bf{\tiny\textcolor{blue}{1j1t}}}
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_2j1t}
+    \put(-35,55){\bf{\tiny\textcolor{blue}{2j1t}}}\\
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_3j1t}
+    \put(-35,55){\bf{\tiny\textcolor{blue}{3j1t}}}
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_4j1t}
+    \put(-35,55){\bf{\tiny\textcolor{blue}{4j1t}}}
+\end{center}
+   \end{frame}
+%------------------------------------------------
+%--------------SLIDE 20--------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{minM(l,b)}
+\begin{center}
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_2j2t}
+    \put(-45,55){\bf{\tiny\textcolor{blue}{2j2t}}}
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_3j2t}
+    \put(-45,55){\bf{\tiny\textcolor{blue}{3j2t}}}\\
+\includegraphics[width=0.33\linewidth]{figs_new/allminmlb_4j2t}
+    \put(-45,55){\bf{\tiny\textcolor{blue}{4j2t}}}
+    \end{center}
+\end{frame}
+
+%------------------------------------------------
+%------------SLIDE 21----------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------SLIDE 22----------------------------
+%------------------------------------------------
+%--------------SLIDE 23--------------------------
+%------------------------------------------------
+\begin{frame}
+\Huge{\textbf {\textcolor {blue}{Fit results and cross section measurement}}}
+\end{frame}
+%------------------------------------------------
+%--------------SLIDE 24--------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Cross Section Measurement}
+\begin{itemize}
+\item The $t\bar{t}$ production cross section $\sigma_{t\bar{t}}$ is extracted from the following expression
+\end{itemize}
+\hfsetfillcolor{gray!10}
+\hfsetbordercolor{gray!50!black}
+\begin{equation}\label{e:barwq3}\begin{split}
+\sigma=
+\tikzmarkin{c}(0.05,0.75)(0.05,0.6)\frac{N_{obs}-N_{bkg}}{A\varepsilon \mathcal{L}}\tikzmarkend{c}\nonumber
+\tikz[remember picture] \node[coordinate] (n1) {};
+\end{split}\end{equation}
+
+\begin{itemize}
+\item We make use of Higgs Combination \tikz[baseline,remember picture]{\node[anchor=base] (t1){tool};}
+\item Use all categories to fit the signal and adjust initial background estimation
+\item In the fit, uncertainties are included
+\begin{equation}
+N^{bkg} \rightarrow N_{nom}^{bkg} \cdot (1 +\theta_{btag}) \cdot (1+\theta_{jes}) \cdot ..... \nonumber
+\end{equation}
+\item Use the profile likelihood method (PLR) to fit the signal strength
+\begin{equation}
+\mu = \sigma_{obs}/\sigma_{th}\nonumber
+\end{equation}
+\end{itemize}
+\begin{tikzpicture}[remember picture,overlay]   %% use here too
+        \path[draw=magenta,thick,->] ([yshift=1mm]n1.west) to [out=0, in=0,distance=0.5in] (t1.east);
+\end{tikzpicture}
+\end{frame}
+%----------------------------------------------------
+%---------------SLIDE 25-----------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{Experimental uncertainties}
+\begin{minipage}{0.5\textwidth}
+\hspace{-1.25cm}
+\centering
+ \includegraphics[height=0.55\textheight]{img/shapes_4j2t_LtagEff_unc}
+    \put(-55,55){\bf{\tiny\textcolor{blue}{$\mu^+$,4j2t}}}
+\begin{itemize}
+\tiny
+\item b-tagging efficiency is expected to have the largest impact on the signal shapes.
+\item nuisances are constrained by log-normal distributions
+\end{itemize}
+ \hspace{-1.25cm}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\hspace{+0.25cm}
+\centering
+\includegraphics[height=0.9\textheight]{img/experimental}
+\hspace{+0.25cm}
+\end{minipage}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 26----------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------SLIDE 27----------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Theory uncertainties}
+\begin{columns}
+\column{0.4\textwidth}
+\includegraphics[width=1.1\linewidth]{img/shapes_4j2t_topPt_unc}
+\begin{itemize}
+\tiny
+\item Distributions for the signal shapes
+\item Hadronizer is expected to have the largest impact on the signal shapes
+\end{itemize}
+\column{0.5\textwidth}
+%\begin{center}
+% \includegraphics[width=0.4\linewidth]{AN}
+ \includegraphics[width=1.12\linewidth]{Table_7}
+%\end{center}
+\end{columns}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 28----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Fit result}
+\begin{center}
+\vspace{-0.35cm}
+\includegraphics[scale=.30]{figs_new/nll1dscan_r}
+\end{center}
+\vspace{-0.5cm}
+\begin{itemize}
+\small
+\item Expected/observed for the cut-in-categories and and the shape analysis
+\end{itemize}
+\begin{align}
+\Aboxed{\mu = 1.003\pm0.003(stat)\pm0.023(syst)}\nonumber
+\end{align}
+\vspace{-1.0cm}
+\begin{align}
+\Aboxed{\mu = 1.030\pm0.004(stat)\pm0.034(syst)}\nonumber
+\end{align}
+\end{frame}
+%----------------------------------------------------
+%--------------SLIDE 29------------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{post-fit nuisances (expected \& observed)}
+\begin{center}
+    \includegraphics[width=0.8\linewidth]{plots/nuisances_cinc}
+    \put(-85,10){\bf{\tiny\textcolor{blue}{CinC}}}\\
+    \includegraphics[width=0.8\linewidth]{plots/nuisances}
+    \put(-85,10){\bf{\tiny\textcolor{blue}{shape}}}
+    \end{center}
+    \begin{itemize}
+    \scriptsize
+    \item Largest pulls are observed for the main backgrounds W and QCD multijets
+    \item All the rest with in 1 $\sigma$
+    \item Post fit uncertainties smaller in shapes as expected
+    \end{itemize}
+\end{frame}
+%----------------------------------------------------
+%---------------SLIDE 30-----------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{correlation factor between each nuisance and the signal strength}
+\begin{center}
+    \includegraphics[width=0.8\linewidth]{plots/correlations_1_cinc}
+    \put(-85,10){\bf{\tiny\textcolor{blue}{CinC}}}\\
+    \includegraphics[width=0.8\linewidth]{plots/correlations_1}
+    \put(-85,10){\bf{\tiny\textcolor{blue}{shape}}}
+    \end{center}
+    \begin{itemize}
+    \scriptsize
+    \item Largest correlations in main backgrounds W, QCD multijets and luminosity
+        \end{itemize}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 31----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Fit in different categories}
+\begin{center}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (-5,7){\includegraphics[scale=.30]{figs_new/xsecSummary}};
+%         \path node at (-1.5,10)[rotate=45,color=red] {\Huge PAS};
+ \end{tikzpicture}
+\end{center}
+\begin{itemize}
+\scriptsize
+%\item Slight tension (1$\sigma$) between electron and muon channels
+%\item Enhanced after combination
+\item The QCD contamination makes the W+jets background being pulled by the fit slightly differently in each channel.
+\item Difference observed is within uncertainties.
+\item Fair agreement between shape and cut-in-categories.
+\end{itemize}
+\end{frame}
+%----------------------------------------------------
+%----------------SLIDE 32----------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{Systematics}
+%\vspace{-0.02cm}
+\center
+\tiny
+\begin{tabular}{lrr}
+\hline
+\bf Source & \bf Distributions & \bf Count \\%& \bf Source & \bf Distributions & \bf Count          \\
+\hline
+Statistical & 0.003 & 0.004 \\
+\hline
+\multicolumn{3}{c}{\it Experimental uncertainties}\\% & \multicolumn{3}{c}{\it Theoretical uncertainties}\\
+Jet energy scale/resolution & 0.001 & 0.007 \\%& $t\bar{t}$ model & 0.002 & 0.001\\
+b tagging & 0.005 & 0.011 \\%& Top quark $p_T$ & 0.004 & 0.003\\
+Pileup & $<$ 0.001 & $<$ 0.001 \\%& Parton shower scales & 0.001 & 0.005\\
+Lepton trigger/selection efficiency & 0.002 & 0.001 \\%& $\mu_{\rm R}/\mu_{\rm F}$ & 0.002 & 0.003\\
+Lepton energy scale & 0.001 & $<$ 0.001 \\%& Single top quark model & 0.002 & 0.003\\
+W+jets model & 0.019 & 0.022 \\%& Top quark mass &  $<$ 0.001 & 0.001\\
+multijet & 0.011 & 0.021 \\
+Other backgrounds & 0.001 & 0.001 \\
+\hline
+\multicolumn{3}{c}{\it Theoretical uncertainties}\\
+$t\bar{t}$ model & 0.002 & 0.001\\
+Top quark $p_T$ & 0.004 & 0.003\\
+Parton shower scales & 0.001 & 0.005\\
+$\mu_{\rm R}/\mu_{\rm F}$ & 0.002 & 0.003\\
+Single top quark model & 0.002 & 0.003\\
+Top quark mass &  $<$ 0.001 & 0.001\\
+\hline
+\bf Total & \bf 0.023 & \bf 0.034 \\
+\hline
+\end{tabular}
+%\vspace{-0.5cm}
+\begin{itemize}
+\scriptsize
+\item The impacts of the systematic uncertainties on the likelihood are evaluated using the following prescription:
+\begin{itemize}
+\scriptsize
+\item fix the nuisances to their post-fit values
+\item repeat the fit freezing several times adding at a time a nuisance (or a group of nuisances)
+\end{itemize}
+\end{itemize}
+\end{frame}
+%----------------------------------------------------
+%------------------------------------------------
+%------------SLIDE 33----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Cross Section Measurement}
+\begin{itemize}
+\item The $t\bar{t}$ production cross section $\sigma_{t\bar{t}}$ is extracted from the following expression
+\end{itemize}
+\hfsetfillcolor{gray!10}
+\hfsetbordercolor{gray!50!black}
+\begin{equation}\label{e:barwq3}\begin{split}
+\sigma=
+\frac{N_{obs}-N_{bkg}}{\tikzmarkin{c}(-0.5,-0.25)(-0.03,0.35)A\varepsilon \mathcal{L}}\tikzmarkend{c}\nonumber
+\tikz[remember picture] \node[coordinate] (n1) {};
+\end{split}\end{equation}
+
+\begin{itemize}
+\item Acceptance is estimated from Powheg+Pythia8 $m_t=172.5$ \tikz[baseline,remember picture]{\node[anchor=base] (t1){GeV};}
+\begin{itemize}
+\item central value affected by the MC choice, hadronizer, parton shower scale
+\item PDF uncertainties
+\item QCD scale choice at ME level
+\end{itemize}
+\item Uncertainty on the luminosity is intrinsic to the measurement 2.7 \%
+(LUM-15-001)
+\end{itemize}
+\begin{tikzpicture}[remember picture,overlay]   %% use here too
+        \path[draw=magenta,thick,->] ([yshift=1mm]n1.east) to [out=0, in=0,distance=1in] (t1.east);
+\end{tikzpicture}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Acceptance Measurement}
+\begin{table}[htb]
+\tiny
+\begin{tabular}{lll}
+\hline
+ Uncertainty &  Procedure & Impact\\
+\hline
+PDF+$\alpha_s$  & RMS of the 100 NNPDF3.0 variations with $\Delta \alpha_s$ = $\pm 0.001$ & $\pm 0.0006$\\
+QCD scale & Envelope of the variations ($\mu_R,\mu_F$) & $\pm0.0017$\\
+PS scale & Difference between nominal PS scale POWHEG+PYTHIA8 and 2,1/2 variations & {}\\
+Hadronizer & Difference between PYTHIA8 and HERWIG++ & $\pm0.0039$\\
+Integrated luminosity & 2.7\% & {}\\
+\hline
+\end{tabular}
+\end{table}
+\vspace{-0.5cm}
+\begin{center}
+\includegraphics[width=0.4\linewidth]{img/acceptance_powheg}
+\end{center}
+\vspace{-0.5cm}
+%\begin{itemize}
+%\tiny
+%\item To measure the inclusive cross section, we need to extrapolate from fiducial to full phase space region
+%\item Different generator samples studied to check variation of acceptance 
+%\item First table indicates the uncertainties considered in the extrapolation to full phase space
+%\item We measure the acceptance 0.2972\pm0.0001(stat)\pm0.0043(syst)
+%\end{itemize}
+\begin{align}
+\Aboxed{Acceptance = 0.2972\pm0.0001(stat)\pm0.0043(syst)}\nonumber
+\end{align}
+\vspace{-0.5cm}
+\begin{itemize}
+\scriptsize
+\item Table indicates the uncertainties considered in the extrapolation to full phase space
+\item Dependence on the mass enhanced by the reqquirement of extra jets
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 34----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{$t\bar{t}$ cross-section summary}
+\begin{columns}
+\column{0.4\textwidth}
+\tiny
+\begin{align}
+\Aboxed{\sigma = 834.7 \pm 2.5 (stat) 
+\pm 20.7 (syst) 
+\pm 22.6 (lumi) 
+\pm 12.5 (extrapol)} \nonumber
+\end{align}
+\vspace{-0.7cm}
+\tiny
+\begin{align}
+\Aboxed{\Delta \sigma /\sigma  = 3.98 \% }\nonumber
+\end{align}
+%\begin{itemize}
+%\small
+%\item Thanks J.Kieseler for such a nice plot
+%\end{itemize}
+\column{0.5\textwidth}
+\vspace{-0.17cm}
+%\begin{center}
+% \includegraphics[width=0.4\linewidth]{AN}
+ \includegraphics[width=1.0\linewidth]{img/tt_xsec_cms13_spring16}
+
+%\end{center}
+%\vspace{-0.5cm}
+\end{columns}
+% \begin{align}
+%\sigma = 834.7 \pm 2.5 (stat) 
+%\pm 20.7 (syst) 
+%\pm 22.6 (lumi) 
+%\pm 12.5 (extrapol) \nonumber
+%\end{align}
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------SLIDE 35----------------------------
+%------------------------------------------------
+%------------------------------------------------
+%------------SLIDE 36----------------------------
+%------------------------------------------------
+\begin{frame}
+\Huge{\textbf {\textcolor {blue}{Pole mass extraction}}}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 37----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{$top^{++} prediction$}
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{plots/toppp_param}
+%    \put(-85,-10){\bf{\small\textcolor{blue}{CinC}}}
+    \end{center}
+%    \begin{equation} 
+\vspace{-0.25cm}
+    \scriptsize
+    \begin{align}
+\Aboxed{\sigma(m_{t})=\sigma(m_{ref})(\frac{m_{ref}}{m_{t}})^4 \times [1 + a_1 (\frac{m-m_{ref}}{m_{ref}}) + a_2 (\frac{m-m_{ref}}{m_{ref}})^2]}\nonumber
+    \end{align}
+%\end{equation}
+    \begin{itemize}
+    \scriptsize
+    \item We parameterize the cross section dependency on the pole mass using $TOP^{++}$ v2.0
+    \item Thanks J.Kieseler for cross-checking our numbers with $top^{++}$
+    \end{itemize}
+\end{frame}
+%----------------------------------------------------
+%-----------------SLIDE 38---------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{Model for the Pole Mass Extraction}
+\begin{center}
+    \includegraphics[width=0.45\linewidth]{plots/model_polemass}
+%    \put(-85,-10){\bf{\small\textcolor{blue}{CinC}}}
+    \end{center}
+    \begin{itemize}
+    \small
+    \item The signal strength is re-parametrized as function of the top pole mass
+    \begin{itemize}
+    \small
+    \item model includes an acceptance correction estimated from MC simulation
+    \item extra correction to bring the LHCTOPWG reference value to NNPDF 3.0 central value
+    \end{itemize}
+    \item Thanks to A. David for his help in cross checking our implementation in Higgs combine tool
+    \end{itemize}
+\end{frame}
+%----------------------------------------------------
+%----------------------SLIDE 39-----------------------
+%-----------------------------------------------------
+\begin{frame}
+\frametitle{Extra uncertainties in the extraction of pole mass}
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\small
+\item In addition to the nuisances added to standard fit in the visible phase space we include:
+\item 1.5\% extrapolation (lnN)
+\item 2.7\% lumi (lnN)
+\item QCD scale (lnU)
+\item PDF+$\alpha_{s}$ (lnN)
+\item Beam energy (lnN)
+\end{itemize}
+\column{0.5\textwidth}
+%\begin{center}
+% \includegraphics[width=0.4\linewidth]{AN}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (-5,7){\includegraphics[scale=.35]{Table_2}};
+%         \path node at (-1,8)[rotate=45,color=red] {\Huge PAS};
+ \end{tikzpicture}
+% \includegraphics[width=1.12\linewidth]{Table_2}
+%\end{center}
+\end{columns}
+\end{frame}
+%-----------------------------------------------------
+%-----------------------------------------------------
+%-----------------------------------------------------
+%----------------------------------------------------
+%-------------------SLIDE 40-------------------------
+%----------------------------------------------------
+\begin{frame}{Measured top mass}
+
+    \begin{center}
+
+        \begin{tikzpicture}
+
+        \node[anchor=south west,inner sep=0] (image) at (-5,7){\includegraphics[scale=.30]{figs_new/nll1dscan_mpole}};
+%         \path node at (-1.5,10)[rotate=45,color=red] {\Huge PAS};
+
+
+        \end{tikzpicture}
+
+    \end{center}
+  \begin{itemize}
+    \scriptsize
+    \item We measure 172.3 +2.7/-2.3 GeV while we expect an uncertainty +2.3/2.7 GeV
+notice the flatness of the likelihood around the minimum. That's induced by a flat prior on the QCD scale uncertainty.
+The QCD scale uncertainty is assymetric so it also induces an asymmetry in the uncertainty
+    \end{itemize}
+\end{frame}
+%------------------------------------------------
+%------------SLIDE 41-----------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{$t\bar{t}$ mass summary}
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\item Thanks Benjamin Stieger for this nice summary plot
+%\item We measure $\sigma = 834.7 \pm 2.5 (stat) \pm 20.7 (syst) \pm 22.6 (lumi) \pm 12.5 (extrapol)$
+%\item $\Delta \sigma /\sigma  = 3.98 \%$
+\end{itemize}
+\column{0.5\textwidth}
+%\begin{center}
+% \includegraphics[width=0.4\linewidth]{AN}
+ \includegraphics[width=1.1\linewidth]{img/pole_mtop}
+%\end{center}
+\end{columns}
+\end{frame}
+%----------------------------------------------------
+%-------------------SLIDE 43-------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{Conclusion}
+\begin{itemize}
+\item We have presented a measurement of the inclusive cross section in the l+jets channel
+\begin{itemize}
+\item focus on optimizing the data to understand the signal in the visible region
+\item uncertainty in the extrapolation reduced by requiring only one jet in the selection
+\end{itemize}
+\item We measure:
+%\setlength{\mathindent}{0pt}
+\begin{align}
+\Aboxed{\sigma = 834.7 \pm 2.5 (stat) \pm 20.7 (syst) \pm 22.6 (lumi) \pm 12.5 (extrapol)}\nonumber
+\end{align}
+\vspace{-0.9cm}
+\begin{align}
+\Aboxed{m_\text{t} = 172.3 +2.7/-2.3 GeV}\nonumber
+\end{align}
+%$m_t$ = 172.3 +2.7/-2.3 GeV
+%\item We request for the approval of analysis for ICHEP
+\end{itemize}
+\end{frame}
+%----------------------------------------------------
+%-------------------SLIDE 44-------------------------
+%----------------------------------------------------
+\begin{frame}
+\frametitle{Acknowledgments}
+We thank T. Arndt, M. Ivova and A. Anuar for their help with the usage
+of the tag and probe tool.
+The cross section and modelling and generators sub-conveners
+(M. Aldaya, M. Soares, J. Keveaney, E. Yazgan, M. Seidel)  are
+acknowledged for their revision of
+the current analysis or specific parts of it.
+J. Kieseler is thanked for helping cross checking the values obtained
+with {TOP++} for the top quark mass dependency of the cross
+section.
+A. David is thanked for cross checking our implementation of the model
+used to parametrize the signal strength as function of the top quark
+mass in the Higgs combination tool package.
+\end{frame}
+%----------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{THE END}}
+\end{frame}
+%-------------------------------------------------
+\end{document} 
